@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: book-store
+description: bookstore API
+mediaType:
+  - application/json
+version: "1.0"
+protocols:
+  - HTTP
+/book-name:
+  get:
+    responses:
+      "200":
+        body:
+          application/json:
+            description: book-name in JSON
+            example:
+              strict: true
+              value:
+                book-id: "001"
+                book-name: Azure
+            type: object
+    queryParameters:
+      book-id:
+        example: Example
+        type: string
+      author?:
+        example: Example
+        type: string
