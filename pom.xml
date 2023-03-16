@@ -6,7 +6,7 @@
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>book-store</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>mule-application</packaging>
 
 	<name>book-store</name>
@@ -37,7 +37,8 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<target>dev-01</target>
 						<targetType>server</targetType>
-						<server>anypoint.credentials</server>
+						<username>${username}</username>
+						<password>${password}</password>
 						<environment>Sandbox</environment>
 
 					</armDeployment>
