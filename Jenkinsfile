@@ -7,8 +7,12 @@ pipeline {
                 }
         }
         stage('Deploy') {
+        	environment {
+        		user = muleuser
+        		password = mulepwd
+        		}
             steps {
-                bat 'mvn deploy -Dusername=ghosh_arijit86 -Dpassword=Hello@123 -DmuleDeploy'
+                bat 'mvn deploy -Dusername=$user -Dpassword=$password -DmuleDeploy'
                 }
         }
     }
