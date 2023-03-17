@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Build') {
            steps {
                 bat 'mvn clean install'
                 }
         }
-        stage('deploy') {
+        stage('Deploy') {
             steps {
                 bat 'mvn deploy -Dusername=ghosh_arijit86 -Dpassword=Hello@123 -DmuleDeploy'
                 }
