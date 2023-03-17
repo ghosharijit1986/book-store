@@ -12,6 +12,7 @@ pipeline {
         		password = 'mulepwd'
         		}
             steps {
+            	bat 'echo "User $user"'
                 bat 'mvn deploy -Dusername=$user -Dpassword=$password -DmuleDeploy'
                 }
         }
