@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Deploy') {
         	environment {
-        		user = muleuser
-        		password = mulepwd
+        		user = 'muleuser'
+        		password = 'mulepwd'
         		}
             steps {
                 bat 'mvn deploy -Dusername=$user -Dpassword=$password -DmuleDeploy'
