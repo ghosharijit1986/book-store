@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Deploy') {
         	environment {
-        		user = 'muleuser'
-        		password = 'mulepwd'
+        		user = 'ghosh_arijit86'
+        		password = 'Hello@123'
         		}
             steps {
             	bat 'echo "User $user"'
