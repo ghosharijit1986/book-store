@@ -12,7 +12,7 @@ pipeline {
         		password = 'Hello@123'
         		}
             steps {
-            	echo ${env.user}
+            	echo "${env.user}"
                 bat 'mvn deploy -Dusername=$user -Dpassword=$password -DmuleDeploy'
                 }
         }
