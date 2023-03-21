@@ -7,6 +7,11 @@ pipeline {
                 }
         }
         stage('Deploy') {
+        	environment {
+        		SECRET_FILE_ID = credentials('mule-sec')
+        		muleuser = credentials('user')
+        		mulepwd = credentials('password')
+        	}
         	
             steps {
             	echo "${muleuser}"
