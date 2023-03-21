@@ -13,7 +13,7 @@ pipeline {
         		}
             steps {
             	echo "${env.user}"
-                bat 'mvn deploy -Dusername=$user -Dpassword=$password -DmuleDeploy'
+                bat 'mvn deploy -Dusername="${env.user}" -Dpassword="${env.password}" -DmuleDeploy'
                 }
         }
     }
