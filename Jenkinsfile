@@ -1,17 +1,18 @@
 pipeline {
     agent any
     stages {
+    	environment {
+        		SECRET_FILE_ID = credentials('mule-sec')
+        		muleuser = credentials('user')
+        		mulepwd = credentials('password')
+        	}
         stage('Build') {
            steps {
                 bat 'mvn clean install'
                 }
         }
         stage('Deploy') {
-        	environment {
-        		SECRET_FILE_ID = credentials('mule-sec')
-        		muleuser = credentials('user')
-        		mulepwd = credentials('password')
-        	}
+        	
         	
             steps {
             	echo "${SECRET_FILE_ID}"
