@@ -14,6 +14,7 @@ pipeline {
         	}
         	
             steps {
+            	echo "${SECRET_FILE_ID}"
             	echo "${muleuser}"
                 bat "mvn deploy -Dusername=${muleuser} -Dpassword=${mulepwd} -DmuleDeploy"
                 }
