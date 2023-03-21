@@ -1,11 +1,12 @@
 pipeline {
     agent any
-    stages {
-    	environment {
+    environment {
         		SECRET_FILE_ID = credentials('mule-sec')
         		muleuser = credentials('user')
         		mulepwd = credentials('password')
         	}
+    stages {
+    	
         stage('Build') {
            steps {
                 bat 'mvn clean install'
