@@ -10,7 +10,7 @@ pipeline {
         	
             steps {
             	echo "${muleuser}"
-                bat 'mvn deploy -Dusername=${muleuser} -Dpassword=${mulepwd} -DmuleDeploy'
+                bat "mvn deploy -Dusername=${muleuser} -Dpassword=${mulepwd} -DmuleDeploy"
                 }
         }
     }
