@@ -12,6 +12,7 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
