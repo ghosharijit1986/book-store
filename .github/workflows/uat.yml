@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "release" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "release" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,5 +21,5 @@ jobs:
   book-store:
     # The type of runner that the job will run on
     
-    uses: ghosharijit1986/ci-cd/.github/workflows/build.yml@main
+    uses: ghosharijit1986/ci-cd/.github/workflows/manual.yml@main
     
