@@ -20,4 +20,6 @@ jobs:
     # The type of runner that the job will run on
     
     uses: ghosharijit1986/ci-cd/.github/workflows/manual.yml@main
+    with:
+      repository: book-store
     
